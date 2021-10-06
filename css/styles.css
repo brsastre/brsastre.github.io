@@ -1,0 +1,228 @@
+/********************
+GOOGLE FONTS
+
+font-family: 'Lato', sans-serif;
+300, 400, 600
+
+font-family: 'Merriweather',serif;
+300, 300 italic, 400, 400 italic, 700, 700 italic
+********************/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/********************
+GENERAL
+********************/
+:root {
+    --light-brown: rgb(210,186,178);
+    --light-gray: #E7EAE9;
+    --dark-gray: #353535;
+    --black: #000000;
+    --box-max-width: 660px;
+}
+body {
+    background-image: url(../assets/dust_scratches.png);
+    background-repeat: repeat;
+}
+.resume {
+    background-color: var(--primary);
+    margin-top: 50px;
+}
+p {
+    line-height: 1.8em;
+    color: var(--dark-gray);
+    font-size: 16px;
+}
+h2 {
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 0.6em;
+    border-top: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
+    padding: 10px;
+    margin-bottom: 30px;
+}
+.row {
+    margin-bottom: 30px;
+}
+/*UL STACK*/
+ul.stack {
+    list-style: none;
+    padding-left: 0;
+    font-family: 'Lato', sans-serif;
+}
+ul.stack li{
+    border-bottom: 1px solid var(--dark-gray);
+    padding: 13px 10px;
+    letter-spacing: 0.1em;
+}
+ul.stack li:first-child{
+    padding-top: 0;
+}
+ul.stack li:last-child{
+    border-bottom: none;
+}
+/*UL TIMELINE*/
+ul.timeline {
+    padding-left: 70px;
+}
+ul.timeline .year {
+    position: absolute;
+    left: -65px;
+}
+ul.timeline .title,
+ul.timeline .subtitle {
+    display: block;
+}
+ul.timeline .title {
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+ul.timeline .subtitle {
+    font-style: italic;
+    font-weight: 300;
+}
+ul.timeline .content {
+    margin-bottom: 0;
+}
+ul.timeline li {
+    position: relative;
+    padding-bottom: 20px;
+}
+ul.timeline li::before {
+    content:"";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background-color: var(--dark-gray);
+    left: -15px;
+    top: 21px;
+}
+ul.timeline li:last-child::before {
+    height: calc(100% - 20px);
+}
+/********************
+HEADER
+********************/
+.aside-header {
+    padding: 50px;
+    background-color: var(--light-brown);
+    /*background: linear-gradient(52deg, rgba(210,186,178,1) 0%, rgba(221,198,186,1) 100%);*/
+}
+.initials {
+    grid-area: initials;
+}
+.name {
+    grid-area: name;
+}
+.position {
+    grid-area: position;
+}
+.date {
+    grid-area: date;
+}
+.box {
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--black);
+    border-left: 2px solid var(--black);
+    max-width: var(--box-max-width);
+    height: 140px;
+    margin: 0 auto 35px;
+    display: grid;
+    grid-template-columns: 22% 53% 25%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+    "initials name name"
+    "initials position date";
+
+}
+.box > div {
+    border-top: 2px solid var(--black);
+    border-right: 2px solid var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box .initials {
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+}
+.box .initials::after {
+    content:"";
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: var(--black);
+    transform: rotate(138deg);
+}
+.box .initials .first{
+    position: absolute;
+    left: 25%;
+    top: 15%;
+}
+.box .initials .second{
+    position: absolute;
+    right: 25%;
+    bottom: 15%;
+}
+.box .name {
+    font-size: 30px;
+    letter-spacing: 0.55em;
+    font-weight: 600;
+}
+.box .position {
+    font-size: 18px;
+    letter-spacing: 0.45em;
+    font-weight: 300;
+}
+.box .date {
+    font-size: 18px;
+    letter-spacing: 0.15em;
+    font-weight: 300;
+}
+.cv-resume {
+    max-width: var(--box-max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cv-resume .line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--black);
+    text-align: center;
+}
+.cv-resume .text {
+    width: 100%;
+    height: 2px;
+    background: var(--light-brown);
+    font-family: 'Merriweather',serif;
+    font-weight: 300;
+    font-style: italic;
+    position: relative;
+    top: -10px;
+    padding: 0 20px;
+}
+/********************
+MAIN
+********************/
+main {
+    background-color: var(--light-gray);
+    padding: 50px;
+    font-family: 'Merriweather',serif;
+}
+.avatar-container {
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    line-height: 0;
+}
+.avatar-container img {
+    width: 170px;
+}
