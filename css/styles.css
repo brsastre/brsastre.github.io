@@ -67,12 +67,18 @@ ul.stack li{
     border-bottom: 1px solid var(--dark-gray);
     padding: 13px 10px;
     letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
 }
 ul.stack li:first-child{
     padding-top: 0;
 }
 ul.stack li:last-child{
     border-bottom: none;
+}
+ul.stack img {
+    width: 25px;
+    margin-right: 8px;
 }
 /*UL TIMELINE*/
 ul.timeline {
