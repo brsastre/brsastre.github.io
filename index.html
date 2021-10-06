@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- STYLES -->
-    <link rel="stylesheet" href="css/bootstrap-grid.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/tuesday.min.css" />
 </head>
 <body>
     <div class="container">
@@ -37,7 +38,7 @@
                 </div>
             </header>
         </aside>
-        <main>
+        <main id="main">
             <header class="main-header">
                 <div class="container-fluid">
                     <div class="row">
@@ -132,5 +133,16 @@
             </header>
         </main>
     </div>
+    <script>
+        (function() {
+            let main = document.getElementById("main");
+        
+            setTimeout(function(){
+                main.classList.add("animated");
+                main.classList.add("tdFadeIn");
+            }, 1000);
+            
+        })();
+    </script>
 </body>
 </html>
