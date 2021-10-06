@@ -259,3 +259,27 @@ RESPONSIVE
         color: transparent
     }
 }
+@media (max-width: 480px) {
+    .container {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .aside-header {
+        padding: 20px;
+    }
+    .box .name {
+        font-size: 15px;
+    }
+    .box .position {
+        font-size: 10px;
+    }
+    .cv-resume {
+        margin-bottom: 10px;
+    }
+    main {
+        padding: 40px 10px;
+    }
+    p {
+        font-size: 14px;
+    }
+}
