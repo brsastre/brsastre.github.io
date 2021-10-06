@@ -23,9 +23,12 @@ body {
     background-image: url(../assets/dust_scratches.png);
     background-repeat: repeat;
 }
+.container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 .resume {
     background-color: var(--primary);
-    margin-top: 50px;
 }
 p {
     line-height: 1.8em;
@@ -44,6 +47,9 @@ h2 {
 }
 .row {
     margin-bottom: 30px;
+}
+a {
+    color: rgb(105, 0, 26);
 }
 /*UL STACK*/
 ul.stack {
@@ -225,4 +231,25 @@ main {
 }
 .avatar-container img {
     width: 170px;
+}
+/********************
+RESPONSIVE
+********************/
+@media (max-width: 991px) {
+    .avatar-col {
+        text-align: center;
+    }    
+}
+@media (max-width: 767px) {
+    .box .name {
+        font-size: 20px;
+        letter-spacing: 0.35em;
+    }
+    .box .position {
+        font-size: 12px;
+        letter-spacing: 0.25em;
+    }
+    .box .date {
+        color: transparent
+    }
 }
